@@ -1,0 +1,12 @@
+section {
+    text-align: center;
+    padding-top:100px;
+    padding-left:300px;
+    padding-right:300px;
+}
+article header p {
+    font-style: italic;
+}
+article{
+    text-align:left;
+}

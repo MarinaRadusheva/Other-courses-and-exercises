@@ -1,0 +1,19 @@
+table, tr, th, td {
+    border: solid;
+    border-collapse: collapse;
+}
+thead, tfoot {
+    width: 100%;
+}
+table {
+    width: 600px;
+    margin: 200px;
+    margin-top:20px;
+    vertical-align:middle;
+}
+thead th {
+    text-align: center;
+}
+td {
+    text-indent: 2px;
+}

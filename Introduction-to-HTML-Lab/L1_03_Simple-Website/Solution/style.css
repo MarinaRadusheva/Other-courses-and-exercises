@@ -1,0 +1,38 @@
+nav, footer {
+    background: MidnightBlue;
+    text-align: center;
+}
+
+ul, body {
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+section {
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+article header p {
+    font-style: italic;
+}
+
+article {
+    text-align: left;
+}
+footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
