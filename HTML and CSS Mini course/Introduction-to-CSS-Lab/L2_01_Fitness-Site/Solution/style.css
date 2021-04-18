@@ -1,0 +1,99 @@
+body {
+    background: lightgrey;
+    font-family: Helvetica, sans-serif;
+    padding: 0 200px;
+}
+
+header {
+    color: #f9690e;
+}
+
+    header nav li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    header a {
+        text-align: center;
+        text-decoration: none;
+        color: #f9690e;
+    }
+
+    header article {
+        float: left;
+        padding: 10px;
+    }
+
+    header i {
+        font-size: 25px;
+    }
+
+nav {
+    text-align: right;
+}
+
+main section:nth-child(1) {
+    background-image: url(picture.jpg);
+    padding: 10rem;
+    background-size: cover;
+    text-align: center;
+}
+
+    main section:nth-child(1) h1 {
+        color: white;
+        text-align: center;
+    }
+
+    main section:nth-child(1) button {
+        background-color: #f9690e;
+        color: white;
+        border: none;
+        padding: 9px;
+        margin-top: 25px;
+        font-weight: bold;
+    }
+
+        main section:nth-child(1) button:hover {
+            background-color: white;
+            color: #f9690e;
+            cursor: pointer;
+        }
+
+#alterEgo {
+    color: #f9690e;
+}
+
+
+
+main section:nth-child(2) article {
+    background-color: #f9690e;
+    color: white;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+    main section:nth-child(2) article h3 {
+        padding-top: 30px;
+    }
+
+    main section:nth-child(2) article p {
+        margin: 30px;
+        text-align: left;
+    }
+
+footer {
+    padding-top:30px;
+}
+
+    footer article:nth-child(1) {
+        float: left;
+    }
+
+    footer article:nth-child(2) {
+        text-align: right;
+    }
+
+        footer article:nth-child(2) i {
+            margin-left: 20px;
+        }
