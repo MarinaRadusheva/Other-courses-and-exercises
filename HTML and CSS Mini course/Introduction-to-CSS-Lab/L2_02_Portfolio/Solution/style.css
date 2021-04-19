@@ -1,0 +1,93 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #F0F3F4;
+    padding: 0 150px;
+}
+
+nav {
+    color: #00d3d4;
+    text-align: center;
+}
+
+    nav li {
+        display: inline-block;
+        border-width: 3px;
+        border-color: white;
+        border-right-style: solid;
+        text-align: center;
+        width: 150px;
+        padding: 10px;
+    }
+
+        nav li:nth-child(1) {
+            border-left-style: solid;
+        }
+
+        nav li i {
+            font-size: 30px;
+            margin-bottom: 13px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #00d3d4
+        }
+
+main section {
+    display: inline-block;
+    height: 400px;
+    padding: 30px;
+}
+
+    main section:nth-child(1) {
+        background-color: #555c6f;
+        color: #b2b6c0;
+        width: 35%;
+        float: left;        
+    }
+
+        main section:nth-child(1) h2 {
+            margin-bottom: 50px;
+        }
+
+        main section:nth-child(1) ul {
+            margin-top: 50px;
+            padding-left: 0;
+        }
+
+            main section:nth-child(1) ul li {
+                display: inline-block;
+                padding-right: 5px;
+            }
+            main section:nth-child(1) p:last-child {
+                margin-top: 110px;
+                font-size: 12px;
+            }
+
+    main section:nth-child(2) {
+        background-color: #00d3d4;
+        color: white;
+        width: 55%;
+    }
+
+        main section:nth-child(2) article {
+            display: inline-block;
+        }
+
+            main section:nth-child(2) article:first-child {
+                float: left;
+                width: 32%;
+            }
+
+        main section:nth-child(2) img {
+            border-width: 10px;
+            border-color: white;
+            border-style: solid;
+            width: 220px;
+            height: 220px;
+            margin-right:20px;
+        }
+
+        main section:nth-child(2) article:last-child {
+            float: right
+        }
