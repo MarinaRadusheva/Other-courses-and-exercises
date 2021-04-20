@@ -1,0 +1,76 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 70px 400px;
+}
+
+    body form {
+        width: 800px;
+        height: 550px;
+    }
+
+        body section {
+            display: inline-block;
+            float: left;
+            width: 49%;
+            height: inherit;
+        }
+
+            body section:nth-child(1) {
+                background-image: linear-gradient(to bottom, rgba(75, 109, 128, 0.52), rgba(109, 51, 133, 0.60)), url("peak.jpg");
+                background-size: cover;
+                text-align: center;
+                color: white;
+                position: relative;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+
+                body section:nth-child(1) h1 {
+                    margin-top: 40px;
+                }
+
+                body section:nth-child(1) article {
+                    position: absolute;
+                    bottom: 15px;
+                    margin-left: 90px;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+
+            body section:nth-child(2) {
+                height: 540px;
+                border-style: solid;
+                border-width: thick;
+                border-color: #38082A;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+                body section:nth-child(2) label {
+                    color: rgb(218, 217, 220);
+                    
+                }
+                body section:nth-child(2) input {
+                    color: rgb(118, 115, 115);
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    font-size: 20px;
+                    border: none;
+                    border-bottom: 2px solid rgb(118, 115, 115);
+                }
+                body section:nth-child(2) button {
+                    margin-top: 10px;
+                    color: white;
+                    background-color: #38082A;
+                    cursor: pointer;
+                    border:none;
+                    border-radius:5px;
+                    width:60%;
+                    height: 40px;
+                    font-size:20px;
+                }
+                body section:nth-child(2) span {
+                    color: #38082A;
+                    font-size:20px;
+                }
+                
+
