@@ -11,23 +11,30 @@ namespace Solution
         public static Dictionary<string, int> AverageAgeForEachCompany(List<Employee> employees)
         {
             Dictionary<string, int> companies = new Dictionary<string, int>();
-            SortedDictionary<string, List<int>> ages = new SortedDictionary<string, List<int>>();
-            foreach (var empl in employees)
+            foreach (var comp in employees.Select(x => x.Company).Distinct().OrderBy(x => x))
             {
-                if (ages.ContainsKey(empl.Company))
-                {
-                    ages[empl.Company].Add(empl.Age);
-                }
-                else
-                {
-                    ages.Add(empl.Company, new List<int>() { empl.Age });
-                }
-            }
-            foreach (var comp in ages)
-            {
-                companies.Add(comp.Key, (int)Math.Round(comp.Value.Average(x => x)));
+                var avgAge = (int)Math.Round(employees.Where(c => c.Company == comp).Select(x => x.Age).Average());
+                companies.Add(comp, avgAge);
             }
             return companies;
+            //Dictionary<string, int> companies = new Dictionary<string, int>();
+            //SortedDictionary<string, List<int>> ages = new SortedDictionary<string, List<int>>();
+            //foreach (var empl in employees)
+            //{
+            //    if (ages.ContainsKey(empl.Company))
+            //    {
+            //        ages[empl.Company].Add(empl.Age);
+            //    }
+            //    else
+            //    {
+            //        ages.Add(empl.Company, new List<int>() { empl.Age });
+            //    }
+            //}
+            //foreach (var comp in ages)
+            //{
+            //    companies.Add(comp.Key, (int)Math.Round(comp.Value.Average(x => x)));
+            //}
+            //return companies;
         }
 
         public static Dictionary<string, int> CountOfEmployeesForEachCompany(List<Employee> employees)
@@ -44,38 +51,37 @@ namespace Solution
                     empl.Add(item.Company, 1);
                 }
             }
-            Dictionary<string, int> result = new Dictionary<string, int>();
-            foreach (var com in empl)
-            {
-                result.Add(com.Key, com.Value);
-            }
+            Dictionary<string, int> result = new Dictionary<string, int>(empl);
             return result;
         }
 
         public static Dictionary<string, Employee> OldestAgeForEachCompany(List<Employee> employees)
         {
-            SortedDictionary<string, Employee> empl = new SortedDictionary<string, Employee>();
-            foreach (var item in employees)
-            {
-                if (empl.ContainsKey(item.Company))
-                {
-                    if (item.Age>empl[item.Company].Age)
-                    {
-                        empl[item.Company] = item;
-                    }
-                }
-                else
-                {
-                    empl.Add(item.Company, item);
-                }
-            }
             Dictionary<string, Employee> result = new Dictionary<string, Employee>();
-            foreach (var sth in empl)
-
+            var companies = employees.Select(x => x.Company).Distinct().OrderBy(x=>x);
+            foreach (var comp in companies)
             {
-                result.Add(sth.Key, sth.Value);
+                var oldestEmpl = employees.Where(x => x.Company == comp).OrderByDescending(x => x.Age).First();
+                result.Add(comp, oldestEmpl);
             }
             return result;
+            //SortedDictionary<string, Employee> empl = new SortedDictionary<string, Employee>();
+            //foreach (var item in employees)
+            //{
+            //    if (empl.ContainsKey(item.Company))
+            //    {
+            //        if (item.Age > empl[item.Company].Age)
+            //        {
+            //            empl[item.Company] = item;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        empl.Add(item.Company, item);
+            //    }
+            //}
+            //Dictionary<string, Employee> result = new Dictionary<string, Employee>(empl);
+            //return result;
         }
 
         public static void Main()
