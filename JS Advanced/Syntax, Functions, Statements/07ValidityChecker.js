@@ -1,13 +1,11 @@
 function DistanceValidation(t1, r1, t2, r2) {
     function Validator(x1, y1, x2, y2) {
-        let a = Math.abs(x1 - x2);
-        let b = Math.abs(y1 - y2);
-        let result = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        if (Number.isInteger(result)) {
-            console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`);
-        } else {
-            console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
-        }
+        const a = Math.abs(x1 - x2);
+        const b = Math.abs(y1 - y2);
+        const result = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        const status = Number.isInteger(result) ? 'valid' : 'invalid';
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is ${status}`);
+
     }
     Validator(t1, r1, 0, 0);
     Validator(t2, r2, 0, 0);
