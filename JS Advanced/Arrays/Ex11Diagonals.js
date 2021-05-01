@@ -15,9 +15,9 @@ function diagonals(array) {
     }
     if (sumFirst == sumSecond) {
         for (let resultItem of resultMatrix) {
-            for(let k=0; k<resultItem.length; k++){
-                if(resultItem[k]===undefined){
-                    resultItem[k]=sumFirst;
+            for (let k = 0; k < resultItem.length; k++) {
+                if (resultItem[k] === undefined) {
+                    resultItem[k] = sumFirst;
                 }
             }
         }
@@ -37,7 +37,8 @@ diagonals(['5 3 12 3 1',
     '101 12 3 21 10',
     '1 4 5 2 2',
     '5 22 33 11 1']);
-    diagonals(['1 1 1',
+    
+diagonals(['1 1 1',
     '1 1 1',
     '1 1 0']
-    );
+);
