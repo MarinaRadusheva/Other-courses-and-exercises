@@ -11,9 +11,9 @@ function createCar(input) {
     let car = {};
     car.model = input.model;
 
-    if (input.power <= 90) {
+    if (input.power <= engines.Small.power) {
         car.engine = engines.Small;
-    } else if (input.power <= 120) {
+    } else if (input.power <= engines.Normal.power) {
         car.engine = engines.Normal;
     } else {
         car.engine = engines.Monster;
