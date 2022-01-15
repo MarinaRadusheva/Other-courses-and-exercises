@@ -1,5 +1,6 @@
 import { addMemberRequest, approveMembership, deleteMember, getTeamById, getTeamMembers } from '../api/data.js';
 import { html} from '../lib.js';
+import { showModal } from './modal.js';
 
 const detailsTemplate = (team, user, isOwner, showButtons, pendingRequests) => html`
          <section id="team-home">
@@ -83,8 +84,13 @@ export async function detailsPage(ctx){
         }
         
         async function leave(ev, id){
-            await deleteMember(id);
-         ctx.render(await populateTemplate(teamId));
+            showModal("The membership will be deleted.", onSelect);
+            async function onSelect(confirmed){
+                if(confirmed){
+                await deleteMember(id);
+                ctx.render(await populateTemplate(teamId));
+                }
+            }            
         }
         async function join(ev, id){
             await addMemberRequest(id);
